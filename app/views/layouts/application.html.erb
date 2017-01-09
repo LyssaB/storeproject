@@ -31,18 +31,20 @@
         </div><!--end navbar-header-->
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-  		      <li><%= link_to("Home", static_pages_index_path) %></li>
+            <li><%= link_to("Home", static_pages_index_path) %></li>
             <li><%= link_to("About", static_pages_about_path) %></li>
             <li><%= link_to("Contact", static_pages_contact_path) %></li>
           </ul>
         </div>
       </div>
-  	</nav>
+    </nav>
     <%= yield %>
     <footer>
       <div class="container">
         &copy; 2016 Lyssa Fineman
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>

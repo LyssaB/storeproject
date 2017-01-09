@@ -1,5 +1,5 @@
 $important-font: "Mirza", cursive;
-$color: #333;
+$color: #fff;
 
 body {
 	font-family: "Dosis", sans-serif;
@@ -10,7 +10,8 @@ body {
 	overflow: auto;
 	background-image: url("geobackground.jpg");
 	background-attachment: fixed;
-	background-size: cover;	
+	background-size: cover;
+	color: $color;
 }
 
 h1{
@@ -19,7 +20,7 @@ h1{
 }
 
 a {
-	color: #fff;
+	color: #7C83AF;
 }
 
 img{
@@ -57,4 +58,9 @@ footer {
 	width: 100%;
 	background-color: #080808;
 	color: white;
+}
+
+.img-responsive {
+	width: 80%;
+	max-width: 570px;
 }
