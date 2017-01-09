@@ -1,0 +1,74 @@
+/* line 4, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+body {
+  font-family: "Dosis", sans-serif;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 2em;
+  overflow: auto;
+  background-image: url("geobackground.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* line 16, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+h1 {
+  font-family: "Mirza", cursive;
+  font-size: 2.5em;
+}
+
+/* line 21, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+a {
+  color: #fff;
+}
+
+/* line 25, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+img {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 20px 0;
+}
+
+/* line 33, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+nav li {
+  text-transform: uppercase;
+}
+
+/*Contact Page*/
+/* line 41, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+.social-btn img {
+  height: auto;
+  width: 40px;
+  margin: 0 1em;
+}
+
+/* line 47, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+.contact-form {
+  padding-bottom: 30px;
+}
+
+/*Sticky footer*/
+/* line 54, D:/storeproject/app/assets/stylesheets/static_pages.scss */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #080808;
+  color: white;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
