@@ -11,8 +11,8 @@
 </p>
 
 <p>
-  <strong>Image rul:</strong>
-  <%= @product.image_rul %>
+  <strong>Image url:</strong>
+  <%= image_tag(@product.image_rul, class: "img-responsive" %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

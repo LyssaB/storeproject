@@ -2,7 +2,7 @@
 
 <h1>Products</h1>
 
-<table>
+<!--<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -24,7 +24,15 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
+
+<div class="prod_container">
+  <% @products.each do |product| %>
+  <h1><%= product.name %></h1>
+  <%= image_tag(product.image_rul, class: "img-responsive") %>
+  <p><%= product.description %> </p>
+  <% end %>
+</div>
 
 <br>
 
