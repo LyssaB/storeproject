@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!--<p>
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
@@ -13,7 +13,31 @@
 <p>
   <strong>Image url:</strong>
   <%= image_tag(@product.image_rul, class: "img-responsive" %>
-</p>
+</p>-->
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-sm-6">
+			<p>
+				<h1>Name</h1>
+				<%= @product.name %>
+			</p>
+		</div>
+		<div class="col-md-4 col-sm-6">
+			<p>
+				<h1>Description</h1>
+				<%= @product.description %>
+			</p>
+		</div>
+		<div class="col-md-4 col-sm-6">
+			<p>
+				<h1>Image url</h1>
+				<%= @product.image_rul %>
+			</p>
+		</div>
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
