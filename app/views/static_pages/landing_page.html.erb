@@ -1,2 +1,6 @@
 <h2>Featured Product:</h2>
-<%= @featured_product.name %>
+<div class="featured">
+	<%= @featured_product.name %>
+	<%= image_tag(@featured_product.image_rul, class: "img-responsive") %>
+	<%= @featured_product.description %>
+</div>
