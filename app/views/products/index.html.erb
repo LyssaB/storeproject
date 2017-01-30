@@ -5,14 +5,7 @@
 <div class="prod_container">
   <div class="row">
     <% @products.each do |product| %>
-      <div class="col-sm-6 col-md-4">
-        <h1><%= product.name %></h1>
-        <%= image_tag(product.image_rul, class: "img-responsive") if product.image_rul %>
-        <p><%= product.colour %> <br> <%= product.description %> <br> $<%= product.price %> </p>
-        <%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'} %>
-      </div>
+      <%= render @products %>
     <% end %>
   </div> <!--end row-->
 </div>
