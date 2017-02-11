@@ -31,8 +31,8 @@
             <%= link_to("Melissa Dawn Designs", static_pages_index_path) %></a>
           </div><!--end MelissaDawnDesigns-->
         </div><!--end navbar-header-->
-        <%= form_tag("/products", method: "get") do %>
-          <%= label_tag(:q, "Search for:") %>
+        <%= form_tag("/products", method: "get", class: "navbar-form navbar-right") do %>
+          <%= label_tag(:q, "Search for:", class: "search-label") %>
           <%= text_field_tag(:q) %>
           <%= submit_tag("Search") %>
         <% end %>

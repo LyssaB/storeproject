@@ -1,8 +1,9 @@
 $important-font: "Mirza", cursive;
 $color: #fff;
+$body-font: "Dosis", sans-serif;
 
 body {
-	font-family: "Dosis", sans-serif;
+	font-family: $body-font;
 	padding-top: 50px;
 	padding-bottom: 30px;
 	text-align: center;
@@ -36,6 +37,17 @@ nav {
 	}
 }
 
+.navbar-form {
+	color: #9d9d9d;
+	font-size: 13px;
+	padding-top: 6px;
+	padding-botton: 15px;
+}
+
+.search-label{
+	display: inline;
+	text-transform: uppercase;
+}
 
 /*Contact Page*/
 
