@@ -2,10 +2,9 @@
 
 <h1>Products</h1>
 
-<div class="prod_container">
+<div class="prod_container ">
   <div class="row">
       <%= render @products %>
   </div> <!--end row-->
+  <%= link_to 'New Product', new_product_path %>
 </div>
-<br>
-<%= link_to 'New Product', new_product_path %>
