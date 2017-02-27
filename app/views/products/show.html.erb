@@ -12,7 +12,10 @@
 
   <p>
     <h3>Product Reviews</h3>
+    <h4>The Best</h4>
     <%= @product.highest_rating_comment.body %>
+    <h4>The Worst</h4>
+    <%= @product.lowest_rating_comment.body %>
   </p>
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
