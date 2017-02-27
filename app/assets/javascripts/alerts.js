@@ -1,4 +1,4 @@
-HEAD
+
 $(document).ready(function() {
 	//$(".alert").fadeIn(1000).delay(2000).fadeOut(1500);
 	window.setTimeout(function() {	
@@ -7,5 +7,4 @@ $(document).ready(function() {
 	});
 	}, 3000);
 
- origin/comments
 });

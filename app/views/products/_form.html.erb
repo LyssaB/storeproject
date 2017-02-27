@@ -22,8 +22,8 @@
   </div>
 
   <div class="field col-md-4 col-sm-12">
-    <%= f.label :image_rul %>
-    <%= f.text_field :image_rul %>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
   </div>
 
   <div class="field col-md-4 col-sm-12">
@@ -39,4 +39,8 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <div>
+    <%= link_to 'Show', @product %> |
+  <%= link_to 'Back', products_path %>
 <% end %>
