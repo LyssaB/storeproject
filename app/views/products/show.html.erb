@@ -1,27 +1,22 @@
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @product.name %>
-</p>
+</h1>
+<div class="prod_container col-md-10 col-md-offset-1">
+  <%= image_tag(@product.image_url, class: "img-responsive") if @product.image_url %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <p>
+    <%= @product.description %>
+    <%= @product.colour %>
+    <%= @product.price %>
+  </p>
+  <p>Average rating:
+    <div class="rated" data-score="<%= @product.average_rating %>"></div>
+  <p>
+  <%= render "comments/new_comment" %>
+  <p>
+    <%= render "comments/comments" %>
+  </p>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
 
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag(@product.image_rul, class: "img-responsive") if @product.image_rul %>
-</p>
-
-<p>
-	<strong>Colour:</strong>
-	<%= @product.colour %>
-</p>
-
-<p>
-	<strong>Price:</strong>
-	<%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</div>

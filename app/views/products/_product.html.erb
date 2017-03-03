@@ -1,11 +1,14 @@
 <div class="product col-sm-6 col-md-4">
-  <!--<h1><%= product.name %></h1>-->
-  <%= image_tag(product.image_rul, class: "img-responsive") if product.image_rul %>
-  <div class="prod_overlay">
+  <div class="prod_title">
+  	<h1><%= product.name %></h1>
+  </div>
+  <%= image_tag(product.image_url, class: "col-xs-12 prod_img") if product.image_url %>
+  <div class="prod_overlay col-xs-9">
   	<%= product.name %>
   </div>
- <!--<p><%= product.colour %> <br> <%= product.description %> <br> $<%= product.price %> </p>-->
-  <%= link_to 'Show', product %>
-  <%= link_to 'Edit', edit_product_path(product) %>
-  <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'} %>
+  <div class="col-md-12">
+  	<%= link_to 'Show', product %>
+  	<%= link_to 'Edit', edit_product_path(product) %>
+  	<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?'} %>
+  </div>
  </div>
