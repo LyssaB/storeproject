@@ -1,0 +1,48 @@
+<div id="contact">
+  <div class="header anchor">
+    <h1>Contact Me</h1>
+  </div><!--end header-->
+  <div class="container">
+    <div class="socialbtns">
+      <a class="social-btn" href="http://www.facebook.com/lyssasstuff"><%= image_tag("facebook.png") %></a>
+      <a class="social-btn" href="https://twitter.com/melissaddesigns"><%= image_tag("twitter.png") %></a>
+      <a class="social-btn" href="https://melissadawnmakes.wordpress.com"><%= image_tag("wordpress.png") %></a>
+    </div><!--end socialbtns-->
+    <div class="info-text col-lg-6 col-md-6">
+      <p>If you have a special project in mind, I'd love to hear from you. I dedicate a lot of time to commissioned pieces, and will collaborate with you so that you get the piece of your dreams! The best way to reach me is by email.</p>
+    </div><!--end info-text-->
+    <div class="info col-lg-6 col-md-6">
+      <p>
+        <span class="glyphicon glyphicon-inbox">
+        </span>
+        <a href="mailto:melissadawn189@gmail.com"> melissadawn189@gmail.com</a>
+      </p>
+      <p>
+        <span class="glyphicon glyphicon-user">
+        </span>
+        Skype: melissadawnjewelry
+      </p>
+    </div><!--end info-->
+  </div><!--end container-->
+  <%= flash[:notice] %>
+
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="container contact-form">
+    <div class="col-offset-1 col-offset-1 centered">
+      <div class="form-group col-md-6 col-sm-12">
+        <%= label_tag :name %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "What's your name?" %>
+      </div>
+      <div class="form-group col-md-6 col-sm-12">
+        <%= label_tag :email, "Email Address" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "What's your email?" %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :message %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "What's on your mind?" %>
+      </div>
+    <%= submit_tag "Send" %>
+    <% end %>
+    </div><!--end contact-form-->
+  </div>
+</div><!--end contact-->

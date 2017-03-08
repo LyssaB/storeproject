@@ -1,0 +1,115 @@
+
+$important-font: "Mirza", cursive;
+$color: #fff;
+$body-font: "Dosis", sans-serif;
+$translucent: rgba(255, 255, 255, 0.7);
+
+@media (max-width: 767px) {
+	body {
+		padding-top: 60px;
+	}
+}
+
+body {
+	font-family: $body-font;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	text-align: center;
+	font-size: 2em;
+	overflow: auto;
+	background-image: url("geobackground.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	color: $color;
+}
+
+h1{
+	font-family: $important-font;
+	font-size: 2.5em;
+}
+
+h2 {
+	padding-bottom: 20px;
+}
+
+a {
+	color: #7C83AF;
+}
+
+img{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 0 20px 0;
+}
+
+
+nav {
+	li{
+		text-transform: uppercase;
+	}
+}
+
+.navbar-form {
+	color: #9d9d9d;
+	font-size: 13px;
+	padding-top: 6px;
+	padding-botton: 15px;
+}
+
+.search-label{
+	display: inline;
+	text-transform: uppercase;
+}
+
+.actions {
+	padding-bottom: 5px;
+}
+
+.actions input {
+	height: 30px;
+}
+
+/*Contact Page*/
+
+.social-btn img{
+	height: auto;
+	width: 40px;
+	margin: 0 1em;
+}
+
+.contact-form {
+	padding-bottom: 30px;
+}
+
+.back {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $translucent;
+	color: #666;
+}
+
+.img-responsive {
+	width: 80%;
+	max-width: 570px;
+}
+
+/*Sticky footer*/
+
+footer {
+	height: 27px;
+	padding-top: 3px;
+	left: 0px;
+	right: 0px;
+	background-color: #080808;
+	color: white;
+	position: fixed;
+	bottom: 0;
+}
+
+/* Carousel */
+
+.carousel-indicators {
+	bottom: -10px;
+}
+
