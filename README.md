@@ -1,1 +1,1 @@
-Something Something Something
+Sample Store Project- Ruby on Rails
