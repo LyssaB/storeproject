@@ -1,54 +1,54 @@
 $translucent: rgba(255, 255, 255, 0.7);
 
 input, textarea {
-	color: #333;
+  color: #333;
 }
 
 .prod_container, .featured {
-	background-color: $translucent;
-	color: #333;
-	padding-bottom: 20px;
-	margin-bottom: 50px;
+  background-color: $translucent;
+  color: #333;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .prod_container .img-repsonsive {
-	max-height: 260px;
+  max-height: 260px;
 }
 
 .edit_product input, .edit_product textarea {
-	width: 90%;
+  width: 90%;
 }
 
 .edit_product {
-	background-color: $translucent;
-	color: #333;
-	padding-bottom: 20px;
-	padding-top: 10px;
+  background-color: $translucent;
+  color: #333;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 .prod_overlay {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: $translucent;
-	display: none;
-	padding: 10px 0 10px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $translucent;
+  display: none;
+  padding: 10px 0 10px 0;
 }
 
 .prod_title {
-	display: none;
+  display: none;
 }
 
 .prod_img {
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
 @media screen and (max-width: 629px) {
-	.prod_title {
-		display: block;
-		padding-bottom: 10px;
-	}
+  .prod_title {
+    display: block;
+    padding-bottom: 10px;
+  }
 }

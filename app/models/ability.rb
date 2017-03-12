@@ -9,7 +9,6 @@ class Ability
     else
         can :read, :all
         can [:create, :read], Comment
-        can :read, Product
     end
   end
     
