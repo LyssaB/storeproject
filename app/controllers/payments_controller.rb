@@ -19,7 +19,8 @@ class PaymentsController < ApplicationController
           product_id: (@product_id)
           total: (@product_price))
       end
-
+      logger.debug "charges are #{charge}"
+      
       rescue Stripe::CardError => e
       body = e.json_body
       err = body[:error]
