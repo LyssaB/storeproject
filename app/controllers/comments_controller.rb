@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   load_and_authorize_resource
   
   def create
-    byebug
+    #byebug
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
