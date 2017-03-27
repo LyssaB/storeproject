@@ -15,12 +15,12 @@ class PaymentsController < ApplicationController
 
       if charge.paid
         Order.create(
+
           user_id: "@user_id",
           product_id: "@product_id",
           total: "@product_price"
           )
       end
-
       rescue Stripe::CardError => e
       body = e.json_body
       err = body[:error]
