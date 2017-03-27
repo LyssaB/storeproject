@@ -2,9 +2,11 @@ class CommentsController < ApplicationController
   load_and_authorize_resource
   
   def create
+    byebug
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
+
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @product, notice: "Review was successfully created!"}
