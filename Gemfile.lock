@@ -40,6 +40,8 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     bcrypt (3.1.11)
+    bcrypt (3.1.11-x64-mingw32)
+    brakeman (3.6.1)
     builder (3.2.3)
     byebug (9.0.6)
     cancancan (1.16.0)
@@ -71,6 +73,7 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.1)
+    in_place_editing (1.2.0)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -197,11 +200,13 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  brakeman
   byebug
   cancancan (~> 1.10)
   coffee-rails (~> 4.2)
   devise
   factory_girl_rails (~> 4.0)
+  in_place_editing (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails
   pg
