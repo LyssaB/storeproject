@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
-  
+  in_place_editing_for :comment, :body
+
   def create
     #byebug
     @product = Product.find(params[:product_id])
