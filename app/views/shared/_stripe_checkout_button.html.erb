@@ -1,6 +1,7 @@
 <script 
   src='https://checkout.stripe.com/checkout.js' class='stripe-button'
   data-key='<%= Rails.configuration.stripe[:publishable_key] %>'
+<<<<<<< HEAD
   data-image='<%= @product.image_url %>'
   data-name='<%= @product.name %>'
   data-description=' <%= @product.description %>'
@@ -8,3 +9,10 @@
 </script>
 <%= hidden_field_tag(:product_id, @product.id) %>
 
+=======
+  data-image='/square-image.jpg'
+  data-name='Demo Site'
+  data-description='2 widgets ($20.00)'
+  data-amount='2000'>
+</script>
+>>>>>>> parent of 99d8eac... 6.5 Add Stripe
