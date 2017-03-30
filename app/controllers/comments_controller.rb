@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
-
+  invisible_captcha only: [:create, :update], honeypot: :subtitle
   def create
     #byebug
     @product = Product.find(params[:product_id])

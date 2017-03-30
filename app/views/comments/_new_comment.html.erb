@@ -7,9 +7,8 @@
         <%= f.text_area :body, :class => "col-sm-12" %>
       </div>
       <div class="col-sm-6 rating stars">
-        <!--<%= f.label :rating, "Rating" %><br>
-        <%= f.text_field :rating, class: "rating" %>-->
       </div>
+      <%= f.invisible_captcha :subtitle %>
     </p>
     <p>
       <%= f.submit "Submit" %>
