@@ -1,21 +1,22 @@
-<h1>
-  <%= @product.name %>
-</h1>
-<div class="prod_container col-md-10 col-md-offset-1">
-  <%= image_tag(@product.image_url, class: "img-responsive img_zoom", data_zoom_image: "@product.image_url") if @product.image_url %>
+<% cache @product do %>
+  <h1>
+    <%= @product.name %>
+  </h1>
+  <div class="prod_container col-md-10 col-md-offset-1">
+    <%= image_tag(@product.image_url, class: "img-responsive img_zoom", data_zoom_image: "@product.image_url") if @product.image_url %>
 
-  <p>
-    <%= @product.description %>
-    <%= @product.colour %>
-    $<%= @product.price / 100 %>
-    <%= form_tag "/payments/create" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-      <%= hidden_field_tag(:product_id, @product.id) %>
-    <% end %>
-  </p>
-  <p>Average rating:
-    <div class="rated" id="rated" data-score="<%= @product.average_rating %>"></div>
-  <p>
+    <p>
+      <%= @product.description %>
+      <%= @product.colour %>
+      $<%= @product.price / 100 %>
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+    </p>
+    <p>Average rating:
+      <div class="rated" id="rated" data-score="<%= @product.average_rating %>"></div>
+    <p>
+  <% end %>
   <%= render "products/new_comment" %>
   <p>
     <%= render "products/comments" %>
@@ -25,4 +26,5 @@
   <%= link_to 'Edit', edit_product_path(@product) %>|<% end %>
   <%= link_to 'Back', products_path %>
 
-</div>
+  </div>
+<% end %>
