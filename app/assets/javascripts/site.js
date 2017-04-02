@@ -11,7 +11,7 @@ var refreshRating = function() {
 $(document).on('turbolinks:load ajaxSuccess', function(){
   refreshRating();
   
-  $('.img-zoom').ezPlus({
+  $('.img_zoom').ezPlus({
     zoomType: "lens",
     lensShape : "round",
     lensSize    : 200
