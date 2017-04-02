@@ -6,4 +6,12 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+
+//Product Image Zoom
+
+  $(".img_zoom").ezPlus({
+    zoomType: "lens",
+    lensShape: "round",
+    lensSize: 200
+  });
 });

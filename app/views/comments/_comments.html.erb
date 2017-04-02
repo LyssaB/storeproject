@@ -9,7 +9,7 @@
             <%= link_to ('<span class="glyphicon glyphicon-trash"></span').html_safe, product_comment_path(comment.product, comment), method: :delete, data: {confirm: "Delete Review?"} %>
           <% end %>
         </p>
-        <p><%= comment.body %></p>
+        $('.product-reviews').prepend("<%= j render @comment %>");
       </div>
   <% end %>
 </div>
