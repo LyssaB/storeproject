@@ -1,15 +1,6 @@
 <div>
   <% @comments.each do |comment| %>
     <div class="prod_reviews">
-      <div class="rated" data-score="<%= comment.rating %>" %> 
-      </div>
-      <div>
-        <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
-          <% if signed_in? && current_user.try(:admin?) %>
-            <%= link_to ('<span class="glyphicon glyphicon-trash"></span').html_safe, product_comment_path(comment.product, comment), method: :delete, data: {confirm: "Delete Review?"} %>
-          <% end %>
-        </p>
-        $('.product-reviews').prepend("<%= j render @comment %>");
-      </div>
+      <%= render partial: "comments/comment", locals: {comment: comment} %>
   <% end %>
 </div>
