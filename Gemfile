@@ -70,3 +70,5 @@ gem 'invisible_captcha'
 gem 'dalli'
 
 gem 'memcachier'
+
+gem 'redis-rails'
