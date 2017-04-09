@@ -21,5 +21,6 @@ module Storeproject
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.cache_store = :redis_store, "redis://lyssab:073b895d46d9b83fdd655f56e16a1eeb@50.30.35.9:3634/"
   end
 end

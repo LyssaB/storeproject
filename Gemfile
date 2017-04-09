@@ -66,3 +66,9 @@ gem 'rails_12factor'
 gem 'listen'
 
 gem 'invisible_captcha'
+
+gem 'dalli'
+
+gem 'memcachier'
+
+gem 'redis-rails'

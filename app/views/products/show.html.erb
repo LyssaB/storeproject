@@ -2,7 +2,7 @@
   <%= @product.name %>
 </h1>
 <div class="prod_container col-md-10 col-md-offset-1">
-  <%= image_tag(@product.image_url, class: "img-responsive img_zoom", data_zoom_image: "@product.image_url") if @product.image_url %>
+  <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") if @product.image_url %>
 
   <p>
     <%= @product.description %>
@@ -15,6 +15,7 @@
   </p>
   <p>Average rating:
     <div class="rated" id="rated" data-score="<%= @product.average_rating %>"></div>
+    Viewed <%= @product.views %> times
   <p>
   <%= render "products/new_comment" %>
   <p>
