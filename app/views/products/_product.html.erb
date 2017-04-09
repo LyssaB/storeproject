@@ -1,17 +1,19 @@
-<div class="product col-sm-6 col-md-4">
-  <div class="prod_title">
-  	<h1><%= product.name %></h1>
-  </div>
-  <%= image_tag(product.image_url, class: "col-xs-12 prod_img") if product.image_url %>
-  <div class="prod_overlay col-xs-9">
-  	<%= product.name %>
-  </div>
-  <div class="col-md-12">
-  	<%= link_to 'Details', product %>
-  <% if signed_in? && current_user.try(:admin?) %>
-  <%= link_to ('<span class="glyphicon glyphicon-pencil"></span').html_safe, edit_product_path(product) %>
-  <%= link_to ('<span class="glyphicon glyphicon-trash"></span').html_safe,  product, method: :delete, data: { confirm: 'Are you sure?'} %>
-<% end %>
+<% cache product do %>
+  <div class="product col-sm-6 col-md-4">
+    <div class="prod_title">
+  	 <h1><%= product.name %></h1>
+    </div>
+    <%= image_tag(product.image_url, class: "col-xs-12 prod_img") if product.image_url %>
+    <div class="prod_overlay col-xs-9">
+  	 <%= product.name %>
+    </div>
+    <div class="col-md-12">
+  	 <%= link_to 'Details', product %>
+    <% if signed_in? && current_user.try(:admin?) %>
+    <%= link_to ('<span class="glyphicon glyphicon-pencil"></span').html_safe, edit_product_path(product) %>
+    <%= link_to ('<span class="glyphicon glyphicon-trash"></span').html_safe,  product, method: :delete, data: { confirm: 'Are you sure?'} %>
+  <% end %>
 <%# logger.debug "Product: #{product.id}" %>
+   </div>
   </div>
- </div>
+<% end %>

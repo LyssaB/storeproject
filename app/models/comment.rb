@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :user
-  belongs_to :product
+  belongs_to :product, touch: true
   scope :descending, -> { reorder(created_at: :desc)}
   validates :body, presence: true
   validates :user, presence: true
