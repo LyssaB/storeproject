@@ -5,6 +5,7 @@ test:
   adapter: async
 
 production:
+
   adapter: postgresql
   url: url: postgres://ibljyfqcanqtul:77d0523985f88aa29d8a0b0134f990bf3651a9710947c586650d881b8d96277a@ec2-54-221-255-153.compute-1.amazonaws.com:5432/d4tuud21gb0fs1
 
