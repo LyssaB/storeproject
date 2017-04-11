@@ -22,5 +22,6 @@ module Storeproject
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.cache_store = :redis_store, "redis://lyssab:073b895d46d9b83fdd655f56e16a1eeb@50.30.35.9:3634/"
+    config.assets.initialize_on_precompile = false
   end
 end
