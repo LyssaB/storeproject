@@ -14,19 +14,19 @@
       <%= hidden_field_tag(:product_id, @product.id) %>
     <% end %>
   </p>
-  <p>
-    <div class="rated" id="rated" data-score="<%= @product.average_rating %>">Average rating: </div>
-    Viewed <%= @product.views %> times
-  </p>
-  <div class="alert-info" style="display:none" role="alert">A new comment was posted!</div>
-  <p>
-    <%= render "products/new_comment" %>
-    <%= render "products/comments" %>
-    <%= will_paginate @comments %>
-  </p>
-  <% if signed_in? && current_user.try(:admin?) %>
-  <%= link_to 'Edit', edit_product_path(@product) %>|<% end %>
-  <%= link_to 'Back', products_path %>
-
-  </div>
 <% end %>
+<p>
+  <div class="rated" id="rated" data-score="<%= @product.average_rating %>">Average rating: </div>
+  Viewed <%= @product.views %> times
+</p>
+<div class="alert-info" style="display:none" role="alert">A new comment was posted!</div>
+<p>
+  <%= render "products/new_comment" %>
+  <%= render "products/comments" %>
+  <%= will_paginate @comments %>
+</p>
+<% if signed_in? && current_user.try(:admin?) %>
+<%= link_to 'Edit', edit_product_path(@product) %>|<% end %>
+<%= link_to 'Back', products_path %>
+
+</div>
