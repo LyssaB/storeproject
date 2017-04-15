@@ -5,7 +5,7 @@
 <div class="prod_container col-md-10 col-md-offset-1">
   <%= image_tag(@product.image_url, class: "img-responsive img_zoom", data_zoom_image: "@product.image_url") if @product.image_url %>
 
-  <p>
+  <p data-product-id="<%=@product.id %>">
     <%= @product.description %>
     <%= @product.colour %>
     $<%= @product.price / 100 %>
