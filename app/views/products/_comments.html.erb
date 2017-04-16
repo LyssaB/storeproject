@@ -2,5 +2,6 @@
   <% @comments.each do |comment| %>
     <div class="prod_reviews">
       <%= render partial: "comments/comment", locals: {comment: comment} %>
+    </div>
   <% end %>
 </div>
