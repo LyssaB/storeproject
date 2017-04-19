@@ -11,8 +11,3 @@ else
 end
 
 Stripe.api_key = Rails.configuration.stripe[:secret_key]
-
-
-
-
-sk_test_pYsjZNNTZ5BhbRSKpcPJLmxL
