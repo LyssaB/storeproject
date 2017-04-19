@@ -13,5 +13,12 @@ class UserMailer < ApplicationMailer
     mail( :to => user.email,
       :subject => "Welcome to #{@appname}!")
   end
+
+  def order_confirmation(order)
+    @order = order
+    mail(:from => 'melissadawn189@gmail.com',
+      :to => order.user.email,
+      :subject => "Thank you for your order! #{order.id}")
+  end
   
 end

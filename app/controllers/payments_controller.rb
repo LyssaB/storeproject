@@ -3,11 +3,12 @@ class PaymentsController < ApplicationController
 
   def create
   token = params[:stripeToken]
-  @product = params[:product_id]
+  @product = Product.find(params[:product_id])
+  @amount = @product.price #price in cents
   @user = current_user
     begin
       charge = Stripe::Charge.create(
-        :amount => @product.price, # amount in cents, again
+        :amount => @amount # amount in cents, again
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
@@ -23,7 +24,8 @@ class PaymentsController < ApplicationController
       rescue Stripe::CardError => e
       body = e.json_body
       err = body[:error]
-      flash[:error] = "I'm sorry, there was a problem processeing your payment: #{err[:message]}"
+      flash[:error] = "I'm sorry, there was a problem processing your payment: #{err[:message]}"
+      redirect_to product_path(@product)
     end
     redirect_to product_path(@product), notice: "Thank you for your purchase!"
   end
