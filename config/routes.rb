@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :users
+  resources :payments
 
   resources :products do
     resources :comments
