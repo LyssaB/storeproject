@@ -16,13 +16,13 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
+  get 'payments/purchase_thankyou'
+
   post 'static_pages/thank_you'
 
   root 'static_pages#index'
 
   post 'payments/create'
-
-  get 'payments/create'
 
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => {:registrations => "user_registration"}
 
