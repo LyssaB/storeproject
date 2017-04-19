@@ -30,6 +30,6 @@ class PaymentsController < ApplicationController
       flash[:error] = "I'm sorry, there was a problem processeing your payment: #{err[:message]}"
     end
 
-    redirect_to "/payments/create"
+    redirect_to "/payments/purchase_thankyou"
   end
 end
